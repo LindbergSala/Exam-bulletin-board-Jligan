@@ -2,14 +2,11 @@ const express = require('express');
 const router = express.Router();
 const { Client } = require('pg');
 
-function getClient() {
-  return new Client({ connectionString: process.env.DATABASE_URL });
-}
-
 // Skapa en prenumeration.
 // Postman: 
 //      POST http://localhost:3000/subscriptions 
 //      Body: (JSON)  "user_id": 1, "channel_id": 2
+
 
 router.post('/', async (req, res) => {
   const { user_id, channel_id } = req.body;
