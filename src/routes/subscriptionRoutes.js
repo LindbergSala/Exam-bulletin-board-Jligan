@@ -11,6 +11,7 @@ function getClient() {
 //      POST http://localhost:3000/subscriptions 
 //      Body: (JSON)  "user_id": 1, "channel_id": 2
 
+
 router.post('/', async (req, res) => {
   const { user_id, channel_id } = req.body;
   if (!user_id || !channel_id) {
