@@ -1,0 +1,1 @@
+jsd24-Databaser-25yhp-Grupp-Examination-SQL-bulletin
