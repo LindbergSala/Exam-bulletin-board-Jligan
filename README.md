@@ -9,3 +9,10 @@ Detta projekt är ett backend-API för en digital anslagstavla där användare k
 - Prenumerera på kanaler
 - Posta meddelanden i kanaler du prenumererar på
 - Hämta meddelanden från kanaler
+
+### Teknisk struktur
+
+- Node.js - JavaScript runtime
+- Express - Webramverk för API-hantering
+- PostgreSQL - Relationsdatabas
+- pg - PostgreSQL-klient för Node.js
