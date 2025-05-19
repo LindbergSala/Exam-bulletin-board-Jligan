@@ -2,6 +2,18 @@ const express = require('express');
 const router = express.Router();
 const client = require('../config/db'); // Din befintliga client
 
+// ---------------------------------------------
+// POST /api/messages
+// Skapa ett nytt meddelande
+// Body (JSON):
+// {
+//   "content": "Ditt meddelande",
+//   "user_id": 1,
+//   "channel_id": 2
+// }
+// OBS! Användaren måste vara prenumerant på kanalen!
+// ---------------------------------------------
+
 // CREATE
 router.post('/', async (req, res) => {
     const { content, user_id, channel_id } = req.body;
@@ -25,7 +37,12 @@ router.post('/', async (req, res) => {
     }
 });
 
-// READ ALL
+// ---------------------------------------------
+// GET /api/messages
+// Hämta alla meddelanden
+// Ingen body behövs
+// ---------------------------------------------
+
 router.get('/', async (req, res) => {
     try {
         const result = await client.query('SELECT * FROM Message');
@@ -35,7 +52,12 @@ router.get('/', async (req, res) => {
     }
 });
 
-// READ ONE
+// ---------------------------------------------
+// GET /api/messages/:id
+// Hämta ett specifikt meddelande
+// Ingen body behövs
+// ---------------------------------------------
+
 router.get('/:id', async (req, res) => {
     try {
         const result = await client.query('SELECT * FROM Message WHERE id = $1', [req.params.id]);
@@ -46,7 +68,15 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// UPDATE
+// ---------------------------------------------
+// PUT /api/messages/:id
+// Uppdatera ett meddelande
+// Body (JSON):
+// {
+//   "content": "Nytt innehåll"
+// }
+// ---------------------------------------------
+
 router.put('/:id', async (req, res) => {
     const { content } = req.body;
     try {
@@ -60,8 +90,11 @@ router.put('/:id', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
-
-// DELETE
+// ---------------------------------------------
+// DELETE /api/messages/:id
+// Ta bort ett meddelande
+// Ingen body behövs
+// ---------------------------------------------
 router.delete('/:id', async (req, res) => {
     try {
         const result = await client.query('DELETE FROM Message WHERE id = $1 RETURNING *', [req.params.id]);
