@@ -4,6 +4,9 @@ node_modules/
 # Miljöfiler
 .env
 
+# Postman
+bulletin-board-api.postman_collection.json
+
 # Loggfiler
 npm-debug.log*
 yarn-debug.log*
