@@ -2,6 +2,17 @@ const express = require('express');
 const router = express.Router();
 const client = require('../config/db');
 
+// ---------------------------------------------
+// POST /api/channels
+// Skapa en ny kanal
+// Body (JSON):
+// {
+//   "name": "Kanalnamn",
+//   "owner_id": 1
+// }
+// OBS! Skapar automatiskt en prenumeration för ägaren
+// ---------------------------------------------
+
 // Skapa ny kanal
 router.post('/', async (req, res) => {
   const { name, owner_id } = req.body;
@@ -28,6 +39,12 @@ router.post('/', async (req, res) => {
   }
 });
 
+// ---------------------------------------------
+// GET /api/channels
+// Hämta alla kanaler
+// Ingen body behövs
+// ---------------------------------------------
+
 // Hämta alla kanaler
 router.get('/', async (req, res) => {
   try {
@@ -37,6 +54,12 @@ router.get('/', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+
+// ---------------------------------------------
+// GET /api/channels/:id
+// Hämta en specifik kanal
+// Ingen body behövs
+// ---------------------------------------------
 
 // Hämta specifik kanal
 router.get('/:id', async (req, res) => {
@@ -48,6 +71,14 @@ router.get('/:id', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+
+// ---------------------------------------------
+// GET /api/channels/:id/messages
+// Hämta alla meddelanden från en kanal
+// Query parameter:
+// user_id (valfritt) - för att kontrollera prenumeration
+// OBS! Om user_id anges kontrolleras att användaren prenumererar på kanalen
+// ---------------------------------------------
 
 // Hämta meddelanden från en kanal
 router.get('/:id/messages', async (req, res) => {
@@ -76,6 +107,17 @@ router.get('/:id/messages', async (req, res) => {
   }
 });
 
+// ---------------------------------------------
+// PATCH /api/channels/:id
+// Uppdatera en kanals namn
+// Body (JSON):
+// {
+//   "name": "Nytt kanalnamn",
+//   "user_id": 1
+// }
+// OBS! Endast kanalens ägare kan uppdatera namnet
+// ---------------------------------------------
+
 // Uppdatera kanalnamn
 router.patch('/:id', async (req, res) => {
   const { name, user_id } = req.body;
@@ -91,6 +133,16 @@ router.patch('/:id', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+
+// ---------------------------------------------
+// DELETE /api/channels/:id
+// Ta bort en kanal
+// Body (JSON):
+// {
+//   "user_id": 1
+// }
+// OBS! Endast kanalens ägare kan ta bort kanalen
+// ---------------------------------------------
 
 // Ta bort kanal
 router.delete('/:id', async (req, res) => {
