@@ -62,7 +62,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-
 // ---------------------------------------------
 // GET /api/subscriptions/:user_id
 // Hämta alla prenumerationer för en viss användare
