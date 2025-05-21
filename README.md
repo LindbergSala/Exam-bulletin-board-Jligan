@@ -42,3 +42,12 @@ Message - Lagrar meddelanden
 - content
 - user_id (FK -> Users.id)
 - channel_id (FK -> Channel.id)
+
+# Snabbinstallation
+
+1. Hämta och installera
+### Klona projektet
+git clone https://github.com/jonssons-liga/sql-bulletin.git
+
+### Installera beroenden
+npm install
