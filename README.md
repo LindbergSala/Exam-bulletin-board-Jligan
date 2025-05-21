@@ -51,3 +51,8 @@ git clone https://github.com/LindbergSala/Exam-bulletin-board-Jligan
 
 ### Installera beroenden
 npm install
+
+2. Konfigurera
+Skapa en .env-fil:
+
+DATABASE_URL=postgres://användarnamn:lösenord@localhost:5432/din databas
