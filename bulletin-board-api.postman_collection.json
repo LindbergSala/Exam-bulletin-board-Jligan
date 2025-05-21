@@ -25,9 +25,14 @@
             "url": {
               "raw": "http://localhost:3000/api/users",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "users"]
+              "path": [
+                "api",
+                "users"
+              ]
             }
           }
         },
@@ -38,9 +43,14 @@
             "url": {
               "raw": "http://localhost:3000/api/users",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "users"]
+              "path": [
+                "api",
+                "users"
+              ]
             }
           }
         },
@@ -51,9 +61,15 @@
             "url": {
               "raw": "http://localhost:3000/api/users/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "users", "1"]
+              "path": [
+                "api",
+                "users",
+                "1"
+              ]
             }
           }
         },
@@ -74,9 +90,15 @@
             "url": {
               "raw": "http://localhost:3000/api/users/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "users", "1"]
+              "path": [
+                "api",
+                "users",
+                "1"
+              ]
             }
           }
         },
@@ -87,9 +109,35 @@
             "url": {
               "raw": "http://localhost:3000/api/users/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "users", "1"]
+              "path": [
+                "api",
+                "users",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Hämta användarens kanaler",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/api/users/1/channels",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users",
+                "1",
+                "channels"
+              ]
             }
           }
         }
@@ -115,9 +163,14 @@
             "url": {
               "raw": "http://localhost:3000/api/channels",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "channels"]
+              "path": [
+                "api",
+                "channels"
+              ]
             }
           }
         },
@@ -128,9 +181,14 @@
             "url": {
               "raw": "http://localhost:3000/api/channels",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "channels"]
+              "path": [
+                "api",
+                "channels"
+              ]
             }
           }
         },
@@ -141,9 +199,15 @@
             "url": {
               "raw": "http://localhost:3000/api/channels/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "channels", "1"]
+              "path": [
+                "api",
+                "channels",
+                "1"
+              ]
             }
           }
         },
@@ -154,11 +218,21 @@
             "url": {
               "raw": "http://localhost:3000/api/channels/1/messages?user_id=1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "channels", "1", "messages"],
+              "path": [
+                "api",
+                "channels",
+                "1",
+                "messages"
+              ],
               "query": [
-                {"key": "user_id", "value": "1"}
+                {
+                  "key": "user_id",
+                  "value": "1"
+                }
               ]
             }
           }
@@ -180,9 +254,15 @@
             "url": {
               "raw": "http://localhost:3000/api/channels/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "channels", "1"]
+              "path": [
+                "api",
+                "channels",
+                "1"
+              ]
             }
           }
         },
@@ -203,9 +283,15 @@
             "url": {
               "raw": "http://localhost:3000/api/channels/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "channels", "1"]
+              "path": [
+                "api",
+                "channels",
+                "1"
+              ]
             }
           }
         }
@@ -231,9 +317,14 @@
             "url": {
               "raw": "http://localhost:3000/api/messages",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "messages"]
+              "path": [
+                "api",
+                "messages"
+              ]
             }
           }
         },
@@ -244,9 +335,14 @@
             "url": {
               "raw": "http://localhost:3000/api/messages",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "messages"]
+              "path": [
+                "api",
+                "messages"
+              ]
             }
           }
         },
@@ -257,9 +353,15 @@
             "url": {
               "raw": "http://localhost:3000/api/messages/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "messages", "1"]
+              "path": [
+                "api",
+                "messages",
+                "1"
+              ]
             }
           }
         },
@@ -280,9 +382,15 @@
             "url": {
               "raw": "http://localhost:3000/api/messages/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "messages", "1"]
+              "path": [
+                "api",
+                "messages",
+                "1"
+              ]
             }
           }
         },
@@ -293,9 +401,15 @@
             "url": {
               "raw": "http://localhost:3000/api/messages/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "messages", "1"]
+              "path": [
+                "api",
+                "messages",
+                "1"
+              ]
             }
           }
         }
@@ -321,9 +435,14 @@
             "url": {
               "raw": "http://localhost:3000/api/subscriptions",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "subscriptions"]
+              "path": [
+                "api",
+                "subscriptions"
+              ]
             }
           }
         },
@@ -334,9 +453,16 @@
             "url": {
               "raw": "http://localhost:3000/api/subscriptions/1/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "subscriptions", "1", "1"]
+              "path": [
+                "api",
+                "subscriptions",
+                "1",
+                "1"
+              ]
             }
           }
         },
@@ -347,9 +473,14 @@
             "url": {
               "raw": "http://localhost:3000/api/subscriptions",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "subscriptions"]
+              "path": [
+                "api",
+                "subscriptions"
+              ]
             }
           }
         },
@@ -360,9 +491,15 @@
             "url": {
               "raw": "http://localhost:3000/api/subscriptions/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "3000",
-              "path": ["api", "subscriptions", "1"]
+              "path": [
+                "api",
+                "subscriptions",
+                "1"
+              ]
             }
           }
         }
