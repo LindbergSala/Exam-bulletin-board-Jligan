@@ -73,7 +73,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // ---------------------------------------------
-// GET /api/channels/:id/messages
+// GET /api/channels/:id/messages?user_id=
 // Hämta alla meddelanden från en kanal
 // Query parameter:
 // user_id (valfritt) - för att kontrollera prenumeration

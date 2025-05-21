@@ -16,3 +16,43 @@ Detta projekt är ett backend-API för en digital anslagstavla där användare k
 - Express - Webramverk för API-hantering
 - PostgreSQL - Relationsdatabas
 - pg - PostgreSQL-klient för Node.js
+
+### Vår databas består av fyra huvudtabeller:
+
+Users - Lagrar användarinformation
+
+- id (PK)
+- name
+  
+Channel - Lagrar kanalinformation
+
+- id (PK)
+- name
+- owner_id (FK -> Users.id)
+  
+Subscription - Kopplingstabell för prenumerationer
+
+- id (PK)
+- user_id (FK -> Users.id)
+- channel_id (FK -> Channel.id)
+  
+Message - Lagrar meddelanden
+
+- id (PK)
+- content
+- user_id (FK -> Users.id)
+- channel_id (FK -> Channel.id)
+
+# Snabbinstallation
+
+1. Hämta och installera
+### Klona projektet
+git clone https://github.com/LindbergSala/Exam-bulletin-board-Jligan
+
+### Installera beroenden
+npm install
+
+2. Konfigurera
+Skapa en .env-fil:
+
+DATABASE_URL=postgres://användarnamn:lösenord@localhost:5432/din databas
