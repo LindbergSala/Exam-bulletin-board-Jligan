@@ -53,6 +53,28 @@ router.get('/:id', async (req, res) => {
 });
 
 // ---------------------------------------------
+// GET /api/users/:id/channels
+// Hämta alla kanaler som en användare prenumererar på
+// Method: GET
+// Ingen body behövs
+// ---------------------------------------------
+// Hämta alla kanaler som en användare prenumererar på
+router.get('/:id/channels', async (req, res) => {
+    const userId = req.params.id;
+    try {
+        const result = await client.query(
+            `SELECT c.* FROM Channel c
+             JOIN Subscription s ON c.id = s.channel_id
+             WHERE s.user_id = $1`,
+            [userId]
+        );
+        res.json(result.rows);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// ---------------------------------------------
 // PUT /api/users/:id
 // Uppdatera en användare
 // Body (JSON):
