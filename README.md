@@ -47,7 +47,7 @@ Message - Lagrar meddelanden
 
 1. Hämta och installera
 ### Klona projektet
-git clone https://github.com/jonssons-liga/sql-bulletin.git
+git clone https://github.com/LindbergSala/Exam-bulletin-board-Jligan
 
 ### Installera beroenden
 npm install
