@@ -56,3 +56,5 @@ npm install
 Skapa en .env-fil:
 
 DATABASE_URL=postgres://användarnamn:lösenord@localhost:5432/din databas
+
+Ersätt användarnamn och lösenord med dina PostgreSQL-inloggningsuppgifter, samt namn på din databas.
