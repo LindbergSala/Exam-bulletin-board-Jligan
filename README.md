@@ -63,7 +63,7 @@ Ersätt användarnamn och lösenord med dina PostgreSQL-inloggningsuppgifter, sa
 
 4. Kör sedan node server.js
 
-### Postman-samling
+## Postman-samling
 
 - Öppna Postman
 - Klicka på "Import" i övre vänstra hörnet
