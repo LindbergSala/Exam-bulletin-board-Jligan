@@ -61,4 +61,4 @@ Ersätt användarnamn och lösenord med dina PostgreSQL-inloggningsuppgifter, sa
 
 3. Initiera tabellerna
 
-4. Kör sedan server.js
+4. Kör sedan node server.js
