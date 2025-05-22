@@ -14,7 +14,7 @@ const client = require('../config/db');
 router.post('/', async (req, res) => {
     const { user_id, channel_id } = req.body;
     if (!user_id || !channel_id) {
-        return res.status(400).json({ error: "user_id och channel_id krävs" });
+        return res.status(400).json({ error: "user_id and channel_id is required" });
     }
     try {
         const result = await client.query(
@@ -40,9 +40,9 @@ router.delete('/:user_id/:channel_id', async (req, res) => {
             [user_id, channel_id]
         );
         if (result.rowCount === 0) {
-            return res.status(404).json({ error: 'Prenumeration hittades inte' });
+            return res.status(404).json({ error: 'Subscription not found.' });
         }
-        res.json({ message: 'Prenumeration avslutad', subscription: result.rows[0] });
+        res.json({ message: 'Subscription ended', subscription: result.rows[0] });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
